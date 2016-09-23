@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar secondary>
+
+    <ion-title>Duty Registration</ion-title>
+
+    <ion-buttons end>
+      <button (click)="logout()">
+        <ion-icon name="log-out" button-danger></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button full [class.button-primary]="isOnDuty" [class.button-light]="!isOnDuty" (click)="onDuty()">On Duty</button>
+
+  <button full [class.button-danger]="!isOnDuty" [class.button-light]="isOnDuty" (click)="offDuty()">Off Duty</button>
+
+</ion-content>
